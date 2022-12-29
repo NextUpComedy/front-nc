@@ -1,0 +1,15 @@
+.stripe-form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+}
+
+@media screen and (max-width: 768px)
+{
+    .stripe-form
+    {
+        width: 100%;
+    }
+}

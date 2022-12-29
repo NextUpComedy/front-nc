@@ -1,0 +1,13 @@
+export { default as NewUsersPage } from './NewUsers.page';
+export { default as RejectedUsersPage } from './RejectedUsers.page';
+export { default as BannedUsersPage } from './BannedUsers.page';
+export { default as UserListPage } from './UserList.page';
+export { default as AddNewUserPage } from './AddNewUser.page';
+export { default as ContentListPage } from './ContentList.page';
+export { default as DashboardSettingsPage } from './DashboardSettings.page';
+export { default as EditUserDataPage } from './EditUserData.page';
+export { default as UserStatisticsPage } from './UserStatistics.page';
+export { default as AdminStatisticsPage } from './AdminStatistics.page';
+export { default as AdminPayoutPage } from './AdminPayout.page';
+export { default as AddStripeUserPage } from './AddStripeUser.page';
+export { default as RepoetPage } from './CreateRepoet.page';

@@ -1,0 +1,41 @@
+.general-view-statistics.ant-card-contain-grid .ant-card-body{
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.general-view-statistics .ant-card-body{
+  margin-top: 2%;
+  padding: 0;
+  display: flex;
+}
+.general-view-statistics .ant-card-grid{
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+.general-view-statistics :last-child{
+  margin-right: 0rem;
+}
+.general-view-statistics.ant-card-bordered{
+  border: none;
+}
+.iconimg{
+  width: 50px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .general-view-statistics .ant-card-body{
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .general-view-statistics .ant-card-grid{
+    margin-right:1rem;
+    margin-bottom: 1rem;
+  }
+  .general-view-statistics .ant-card-grid{
+    margin-right: 1rem;
+    width: 40%;
+  }
+
+}

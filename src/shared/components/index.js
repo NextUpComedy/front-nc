@@ -1,0 +1,6 @@
+export { default as Loader } from './Spinner';
+export { default as UsersTable } from './Table';
+export { default as FormModel } from './Form';
+export { default as Logo } from './Logo';
+export { default as MainTitle } from './MainTitle';
+export { default as Image } from './Image';

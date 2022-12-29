@@ -1,0 +1,28 @@
+.requestpayment{
+    display: flex;
+    justify-content: space-between;
+} 
+
+.ask-payment-btn{
+
+    width: 150px;
+    height: 44px;
+    color: rgb(0, 0, 0);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .ask-payment-btn.ant-btn-primary:hover,
+  .ant-btn-primary:focus {
+    color:  var(--white-color);
+    border-color: var(--main-color);
+    background: #0eb6ad;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ask-payment-btn {
+      width: 120px;
+    }
+  }
+    

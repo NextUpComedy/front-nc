@@ -1,0 +1,39 @@
+import {
+  USER_URL,
+  LOGIN_URL,
+  LOGOUT_URL,
+  REGISTER_URL,
+  GOOGLE_LOGIN_URL,
+  FORGET_PASSWORD_URL,
+  RESET_PASSWORD_URL,
+  EDIT_PROFILE_URL,
+  FINANCIAL_STATUS_URL,
+  CHANGE_PASSWORD_URL,
+  STATISTICS_DATA_URL,
+  GET_USER_CONTENT_URL,
+  PAYOUTS_URL,
+} from 'shared/constants/endpoints';
+import { axiosCall } from '../utils';
+
+export default {
+  createUser: (userInfo) => axiosCall(REGISTER_URL, 'POST', userInfo),
+  getUser: () => axiosCall(USER_URL, 'GET'),
+  updateUser: (userInfo) => axiosCall(EDIT_PROFILE_URL, 'PATCH', userInfo),
+  getStatistics: () => axiosCall(STATISTICS_DATA_URL, 'GET'),
+  loginUser: (credentials) => axiosCall(LOGIN_URL, 'POST', credentials),
+  logoutUser: () => axiosCall(LOGOUT_URL, 'GET'),
+  googleLogin: (method, tokenId) => axiosCall(GOOGLE_LOGIN_URL(method), 'POST', { tokenId }),
+  getUserContent: (data) => axiosCall(GET_USER_CONTENT_URL(data), 'GET'),
+
+  forgetPassword: (email) => axiosCall(FORGET_PASSWORD_URL, 'POST', email),
+  resetPassword: (email) => axiosCall(RESET_PASSWORD_URL, 'POST', email),
+
+  createFinancialData: (data) => axiosCall(FINANCIAL_STATUS_URL, 'POST', data),
+  getFinancialStatus: () => axiosCall(FINANCIAL_STATUS_URL, 'GET'),
+
+  updateFinancialData: (data) => axiosCall(FINANCIAL_STATUS_URL, 'PATCH', data),
+  changePassword: (data) => axiosCall(CHANGE_PASSWORD_URL, 'PATCH', data),
+  getUserPayouts: () => axiosCall(PAYOUTS_URL, 'GET'),
+  askForPayout: () => axiosCall(PAYOUTS_URL, 'PUT'),
+  cancelPayout: () => axiosCall(PAYOUTS_URL, 'PATCH'),
+};

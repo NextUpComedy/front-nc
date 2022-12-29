@@ -1,2 +1,1 @@
-# -front-nc
- Frontend for NextUp Comedy 
+# Nextup Comedy

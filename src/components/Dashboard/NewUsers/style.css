@@ -1,0 +1,19 @@
+.sort{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.search{
+ width: 40%;
+}
+.iconStas{
+    width: 40px;
+  
+  }
+  .statistics{
+    text-align: center;
+  }

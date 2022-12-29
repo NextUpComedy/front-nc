@@ -1,0 +1,134 @@
+.contents-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  margin-top: 2rem;
+}
+
+
+.my-pagination {
+  margin-top: 2rem;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.contents-list__video-card {
+  display: flex;
+  align-items: center;
+}
+
+.contents-list__video-card .image-wrapper img {
+  width: 100px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+ .info {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  color: var(--black-color);
+  text-align: center;
+}
+.contenttitle{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--black-color);
+  text-align: center;
+}
+.videolink{
+  color: var(--black-color);
+  text-decoration: none;
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+.videoDate{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black-color);
+  text-align: center;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero .form-container {
+  flex: 1;
+  margin-right: 4rem;
+  margin-top: 1rem;
+
+}
+
+.hero .form-container > * {
+  flex: 1;
+}
+
+.contents-list__video-card .title {
+  font-weight: bold;
+  line-height: 1.1;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.contents-list__video-card .permalink,
+.content-container span {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+}
+
+.form-container .ant-col-16,
+.form-container .ant-col-8 {
+  max-width: 100% !important;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content-container .poster {
+  border-radius: 12px;
+  width: 270px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+
+.content-container h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  width: 270px;
+}
+
+.match-content-btn {
+  background-color: var(--main-color);
+  color: var(--black-color);
+  border: none;
+}
+
+.match-content-btn:hover {
+  background-color: #0fb9b1;
+  color: var(--black-color);
+}
+ @media screen and (max-width: 768px) {
+
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+
+  }
+  .hero .form-container {
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+
+
+}
