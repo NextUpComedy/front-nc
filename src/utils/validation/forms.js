@@ -188,43 +188,36 @@ const validationMessages = {
       message: 'Please enter Expired After In Years',
     },
   ],
-  viewliftEmail: [
+  uScreenEndpoint: [
     {
       required: true,
-      message: 'Please enter ViewLift Email',
-      type: 'email',
-    },
-  ],
-  viewliftEndpoint: [
-    {
-      required: true,
-      message: 'Please enter ViewLift Endpoint',
+      message: 'Please enter Uscreen Endpoint',
       type: 'url',
     },
   ],
-  viewliftWatchesFetchLimit: [
+  uScreenWatchesFetchLimit: [
     {
       required: true,
-      message: 'Please enter ViewLift Watches Fetch Limit',
+      message: 'Please enter Uscreen Watches Fetch Limit',
       type: 'number',
       validator(_, value) {
         if (value > 1000 || value < 1) {
-          return Promise.reject(new Error('ViewLift Watches Fetch Limit cannot be greater than 1000 or less than 1'));
+          return Promise.reject(new Error('Uscreen Watches Fetch Limit cannot be greater than 1000 or less than 1'));
         }
         return Promise.resolve();
       },
-    },
-  ],
-  viewliftPassword: [
-    {
-      required: true,
-      message: 'Please enter ViewLift Password',
     },
   ],
   stripeKey: [
     {
       required: true,
       message: 'Please enter Stripe API Key',
+    },
+  ],
+  uscreenApiKey: [
+    {
+      required: true,
+      message: 'Please enter Uscreen API Key',
     },
   ],
   stripeUserId: [

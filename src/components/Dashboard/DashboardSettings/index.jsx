@@ -25,11 +25,9 @@ function DashboardSettings() {
     setIsFormChanged(false);
   }, [form]);
   const onFinish = (values) => {
-    const { viewliftEmail, ...rest } = values;
-    viewliftEmail.toLowerCase();
+    const { ...rest } = values;
     dispatch(
       updateDashboardSettings({
-        viewliftEmail,
         ...rest,
       }),
     );
@@ -50,22 +48,6 @@ function DashboardSettings() {
         <div className="dash-settings-sub">
           <div className="dash-settings-right">
             <Form.Item
-              label="View lift Email"
-              name="viewliftEmail"
-              className="dash-settings-input"
-              rules={validationMessages.viewliftEmail}
-            >
-              <Input placeholder="Viewlift Email" type="email" />
-            </Form.Item>
-            <Form.Item
-              className="dash-settings-input"
-              label="View lift Password"
-              name="viewliftPassword"
-              rules={validationMessages.viewliftPassword}
-            >
-              <Input.Password placeholder="Viewlift Password" type="password" />
-            </Form.Item>
-            <Form.Item
               className="dash-settings-input"
               label="Stripe API Key"
               name="stripeKey"
@@ -75,23 +57,20 @@ function DashboardSettings() {
             </Form.Item>
             <Form.Item
               className="dash-settings-input"
-              label="View lift Endpoint"
-              name="viewliftEndpoint"
-              rules={validationMessages.viewliftEndpoint}
+              label="Uscreen Endpoint"
+              name="uScreenEndpoint"
+              rules={validationMessages.uScreenEndpoint}
             >
-              <Input placeholder="Viewlift Endpoint" type="url" />
+              <Input placeholder="Uscreen Endpoint" type="url" />
             </Form.Item>
             <Form.Item
               className="dash-settings-input"
-              label="View lift Watches Fetch Limit"
-              name="viewliftWatchesFetchLimit"
-              rules={validationMessages.viewliftWatchesFetchLimit}
+              label="Uscreen Watches Fetch Limit"
+              name="uScreenWatchesFetchLimit"
+              rules={validationMessages.uScreenWatchesFetchLimit}
             >
-              <Input placeholder="Viewlift Watches Fetch Limit" type="number" />
+              <Input placeholder="Uscreen Watches Fetch Limit" type="number" />
             </Form.Item>
-
-          </div>
-          <div className="dash-settings-left">
             <Form.Item
               className="dash-settings-input"
               label="System Activation Date"
@@ -99,6 +78,24 @@ function DashboardSettings() {
               rules={validationMessages.systemActivationDate}
             >
               <Input placeholder="System Activating Date" type="date" />
+            </Form.Item>
+            <Form.Item
+              className="dash-settings-input"
+              label="Calculator Endpoint"
+              name="calculatorEndpoint"
+              rules={validationMessages.calculatorEndpoint}
+            >
+              <Input placeholder="Calculator Endpoint" type="url" />
+            </Form.Item>
+          </div>
+          <div className="dash-settings-left">
+            <Form.Item
+              className="dash-settings-input"
+              label="Uscreen API Key"
+              name="uscreenApiKey"
+              rules={validationMessages.uscreenApiKey}
+            >
+              <Input.Password placeholder="Uscreen API Key" type="password" />
             </Form.Item>
             <Form.Item
               className="dash-settings-input"
@@ -123,14 +120,6 @@ function DashboardSettings() {
               rules={validationMessages.expiredAfterInYears}
             >
               <Input placeholder="Expired After In Years" type="number" />
-            </Form.Item>
-            <Form.Item
-              className="dash-settings-input"
-              label="Calculator Endpoint"
-              name="calculatorEndpoint"
-              rules={validationMessages.calculatorEndpoint}
-            >
-              <Input placeholder="Calculator Endpoint" type="url" />
             </Form.Item>
 
           </div>
